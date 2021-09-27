@@ -1,3 +1,7 @@
+'''Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), 
+and tax percent (the percentage of the meal price being added as tax) for a meal, 
+find and print the meal's total cost. Round the result to the nearest integer.
+'''
 
 import math
 import os
@@ -15,12 +19,12 @@ def solve(meal_cost, tip_percent, tax_percent):
 
     print(total_cost)
 
-    if __name__ == '__main__':   
+if __name__ == '__main__':   
+    
+    meal_cost = float(input('enter meal_cost').strip())
 
-        meal_cost = float(input('enter meal_cost').strip())
+    tip_percent = int(input('enter tip_percent').strip())
 
-        tip_percent = int(input('enter tip_percent').strip())
+    tax_percent = int(input('enter tip_percent').strip())
 
-        tax_percent = int(input('enter tip_percent').strip())
-
-        solve(meal_cost, tip_percent, tax_percent)
+    solve(meal_cost, tip_percent, tax_percent)
