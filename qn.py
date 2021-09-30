@@ -9,22 +9,19 @@ import random
 import re
 import sys
 
+# Complete the solve function below.
 def solve(meal_cost, tip_percent, tax_percent):
 
-    tip=(tip_percent/100)*meal_cost
+    total_cost =  meal_cost + meal_cost * tip_percent/100 + meal_cost * tax_percent/100
 
-    tax=(tax_percent/100)*meal_cost
+    print(round(total_cost))
 
-    total_cost=round(meal_cost+tax+tip)
+if __name__ == '__main__':
 
-    print(total_cost)
+    meal_cost = float(input('enter meal_cost :'))
 
-if __name__ == '__main__':   
-    
-    meal_cost = float(input('enter meal_cost').strip())
+    tip_percent = int(input('enter tip_percent :'))
 
-    tip_percent = int(input('enter tip_percent').strip())
-
-    tax_percent = int(input('enter tip_percent').strip())
+    tax_percent = int(input('enter tip_percent : '))
 
     solve(meal_cost, tip_percent, tax_percent)
